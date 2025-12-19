@@ -20,6 +20,10 @@ app.use('/api/jobs', jobRoutes);
 app.use('/api/interviews', interviewRoutes);
 app.use('/api/updates', updateRoutes);
 
+app.get('/', (req, res) => {
+  res.json({ message: 'JobBook API is running', status: 'success' });
+});
+
 app.get('/api/health', (req, res) => {
   res.json({ status: 'Backend is running' });
 });
